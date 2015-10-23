@@ -1,4 +1,5 @@
 ﻿
+// Ref.: https://msdn.microsoft.com/en-us/library/office/jj163201.aspx
 
 function createList(siteUrl) {
     var clientContext = new SP.ClientContext(siteUrl);
