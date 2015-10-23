@@ -16,6 +16,8 @@ namespace DXNextHackatonWeb.Models
         public List<UserModel> DirectReports { get; set; }
         public List<FileModel> Files { get; set; }
 
+        public EventModel Event { get; set; }
+
         public async static Task<UserDetailModel> GetUserDetail(string path, string token)
         {
             UserDetailModel data = new UserDetailModel();
@@ -41,6 +43,9 @@ namespace DXNextHackatonWeb.Models
                 data.Files = new List<FileModel>();
             else
                 data.Files = JObject.Parse(json).SelectToken("value").ToObject<List<FileModel>>();
+
+            json = await GetJson(String.Format("https://graph.microsoft.com/beta/me/events/AAMkAGZiOTg1ODYxLWQzZjYtNDgwNC1hOGQ1LWRlODhkOGRmOWYzNwBGAAAAAAC_g6G9ZjDmRpocKywem9C6BwCpc1j6TQpdRZlhpiqT8JQVAAAAAAENAACpc1j6TQpdRZlhpiqT8JQVAABt-1FOAAA="), token);
+            data.Event = JsonConvert.DeserializeObject<EventModel>(json);
 
             return data;
         }
