@@ -9,8 +9,27 @@
 <div class="row">
     <div class="col-xs-6">
         @*<h2>Manager: <a href="/User/Detail?id=@Model.Manager.objectId">@Model.Manager.displayName</a></h2>*@
-        <h2>User: @Model.User.displayName</h2>
-        @*<h2>
+        <div style="float:left; padding-right:5px;">
+            <img src="~/images/Turn Out Icon.png" />
+        </div>
+        <h2>Welcome back @Model.User.displayName</h2>
+        <br />
+        <p>How was the Turn Out?</p>
+        <div id =" imageRow "class="row">
+            <div id="unHappy"class="col-lg-2" style="margin-right:20px;">
+                <img src="~/images/Unproductive.png" />
+            </div>
+            <div id="worthWhile" class="col-lg-2" style="margin-left:20px;">
+                <img src="~/images/Worthwhile.png" />
+            </div>
+          </div>
+        <br />
+        <div class="row" style="padding-left :20px;">
+            <label>Comments:</label>
+            <input id="userComment" class="input-lg " type="text"  />
+        </div>
+        <input id="toSubmit" class="btn-default" type="button" title="submit"/>
+                @*<h2>
                 Direct Reports:
                 @for (var i = 0; i < Model.DirectReports.Count; i++)
                 {
@@ -21,14 +40,14 @@
 
         @if (Model.Event != null)
         {
-        <h2>
-            Event: @Model.Event.Subject
-        </h2>
-        <div>
-            <h3>Start: @Model.Event.Start </h3>
-            <h3>End: @Model.Event.End </h3>
-            <h3>Organizer: @Model.Event.Organizer.EmailAddress.Name - @Model.Event.Organizer.EmailAddress.Address </h3>
-        </div>
+            <h2>
+                Event: @Model.Event.Subject
+            </h2>
+            <div>
+                <h3>Start: @Model.Event.Start </h3>
+                <h3>End: @Model.Event.End </h3>
+                <h3>Organizer: @Model.Event.Organizer.EmailAddress.Name - @Model.Event.Organizer.EmailAddress.Address </h3>
+            </div>
         }
     </div>
     @*<div class="col-xs-6">
