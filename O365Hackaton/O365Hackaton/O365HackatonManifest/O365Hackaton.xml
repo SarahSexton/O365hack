@@ -3,10 +3,10 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
   <Id>069250f7-9c64-4bf8-a964-592a9af4263b</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>[Provider name]</ProviderName>
+  <ProviderName>MSFT</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="O365Hackaton" />
-  <Description DefaultValue="O365Hackaton"/>
+  <DisplayName DefaultValue="Turn Out" />
+  <Description DefaultValue="Worldwide TEs are hacking in o365!!"/>
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>

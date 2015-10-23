@@ -67,6 +67,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppCompose\Home\Feedback.html" />
+    <Content Include="AppCompose\Home\Feedback.js" />
+    <Content Include="AppCompose\Home\Feedback.css" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
