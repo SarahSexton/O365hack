@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "siteName": {
-            "value": "O365Hack"
+            "value": "turnout"
         },
         "hostingPlanName": {
             "value": "O365HackPlan"
