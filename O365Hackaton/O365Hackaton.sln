@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O365Hackaton", "O365Hackato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O365HackatonWeb", "O365HackatonWeb\O365HackatonWeb.csproj", "{2FC3B113-E91E-4DF9-8DB8-69520BFDB2B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXNextHackatonWeb", "DXNextHackatonWeb\DXNextHackatonWeb.csproj", "{2A61B630-22B1-4732-85C3-03DD89ED8533}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{2FC3B113-E91E-4DF9-8DB8-69520BFDB2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FC3B113-E91E-4DF9-8DB8-69520BFDB2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FC3B113-E91E-4DF9-8DB8-69520BFDB2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A61B630-22B1-4732-85C3-03DD89ED8533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A61B630-22B1-4732-85C3-03DD89ED8533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A61B630-22B1-4732-85C3-03DD89ED8533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A61B630-22B1-4732-85C3-03DD89ED8533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
