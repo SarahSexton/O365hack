@@ -14,10 +14,10 @@ namespace DXNextHackatonWeb.Controllers
     {
         // GET: User
         [Authorize]
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string eventId)
         {
             var token = await GetAccessToken();
-            var user = await UserDetailModel.GetUserDetail("me", token.AccessToken);
+            var user = await UserDetailModel.GetUserDetail("me", token.AccessToken, eventId);
             return View(user);
         }
 
@@ -25,7 +25,7 @@ namespace DXNextHackatonWeb.Controllers
         public async Task<ActionResult> Detail(Guid id)
         {
             var token = await GetAccessToken();
-            var user = await UserDetailModel.GetUserDetail(String.Format("{0}/users/{1}", SettingsHelper.AzureAdTenant, id.ToString()), token.AccessToken);
+            var user = await UserDetailModel.GetUserDetail(String.Format("{0}/users/{1}", SettingsHelper.AzureAdTenant, id.ToString()), token.AccessToken, string.Empty);
             return View(user);
         }
 

@@ -18,7 +18,7 @@ namespace DXNextHackatonWeb.Models
 
         public EventModel Event { get; set; }
 
-        public async static Task<UserDetailModel> GetUserDetail(string path, string token)
+        public async static Task<UserDetailModel> GetUserDetail(string path, string token, string eventId)
         {
             UserDetailModel data = new UserDetailModel();
 
@@ -44,8 +44,11 @@ namespace DXNextHackatonWeb.Models
             else
                 data.Files = JObject.Parse(json).SelectToken("value").ToObject<List<FileModel>>();
 
-            json = await GetJson(String.Format("https://graph.microsoft.com/beta/me/events/AAMkAGZiOTg1ODYxLWQzZjYtNDgwNC1hOGQ1LWRlODhkOGRmOWYzNwBGAAAAAAC_g6G9ZjDmRpocKywem9C6BwCpc1j6TQpdRZlhpiqT8JQVAAAAAAENAACpc1j6TQpdRZlhpiqT8JQVAABt-1FOAAA="), token);
-            data.Event = JsonConvert.DeserializeObject<EventModel>(json);
+            if (!string.IsNullOrEmpty(eventId))
+            {
+                json = await GetJson(String.Format("https://graph.microsoft.com/beta/me/events/{0}", eventId), token);
+                data.Event = JsonConvert.DeserializeObject<EventModel>(json);
+            }
 
             return data;
         }

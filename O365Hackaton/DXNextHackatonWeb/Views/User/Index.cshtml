@@ -11,14 +11,16 @@
         @*<h2>Manager: <a href="/User/Detail?id=@Model.Manager.objectId">@Model.Manager.displayName</a></h2>*@
         <h2>User: @Model.User.displayName</h2>
         @*<h2>
-            Direct Reports:
-            @for (var i = 0; i < Model.DirectReports.Count; i++)
-            {
-                <span><a href="/User/Detail?id=@Model.DirectReports[i].objectId">@Model.DirectReports[i].displayName</a></span>if (i < Model.DirectReports.Count - 1)
-                {<span>, </span>}
-            }
-        </h2>*@
+                Direct Reports:
+                @for (var i = 0; i < Model.DirectReports.Count; i++)
+                {
+                    <span><a href="/User/Detail?id=@Model.DirectReports[i].objectId">@Model.DirectReports[i].displayName</a></span>if (i < Model.DirectReports.Count - 1)
+                    {<span>, </span>}
+                }
+            </h2>*@
 
+        @if (Model.Event != null)
+        {
         <h2>
             Event: @Model.Event.Subject
         </h2>
@@ -27,14 +29,15 @@
             <h3>End: @Model.Event.End </h3>
             <h3>Organizer: @Model.Event.Organizer.EmailAddress.Name - @Model.Event.Organizer.EmailAddress.Address </h3>
         </div>
+        }
     </div>
     @*<div class="col-xs-6">
-        <h2>@Model.User.displayName's files</h2>
-        <ul>
-            @foreach (var file in Model.Files)
-            {
-                <li>@file.name</li>
-            }
-        </ul>
-    </div>*@
+            <h2>@Model.User.displayName's files</h2>
+            <ul>
+                @foreach (var file in Model.Files)
+                {
+                    <li>@file.name</li>
+                }
+            </ul>
+        </div>*@
 </div>
