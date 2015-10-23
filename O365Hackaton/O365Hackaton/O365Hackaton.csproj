@@ -43,6 +43,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="O365HackatonManifest\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{293c547d-b7f2-4000-ba33-af553a34eba9}</SharePointProjectItemId>
     </None>
