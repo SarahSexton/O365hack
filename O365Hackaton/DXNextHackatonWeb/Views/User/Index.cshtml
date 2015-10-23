@@ -7,10 +7,32 @@
 
 @{ ViewBag.Title = "Turn Out"; }
 <div class="row">
-    <div class="col-xs-6">
+    <div class=" form-group">
         @*<h2>Manager: <a href="/User/Detail?id=@Model.Manager.objectId">@Model.Manager.displayName</a></h2>*@
-        <h2>User: @Model.User.displayName</h2>
-        @*<h2>
+        <div style="float:left; padding-right:5px;">
+            <img src="~/images/Turn Out Icon.png" />
+        </div>
+        <h2>Welcome back @Model.User.displayName</h2>
+        <br />
+        <p>How was the Turn Out?</p>
+        <div id ="imageRow"class="row">
+            <div id="unHappy"class="col-lg-2">
+                <img src="~/images/Unproductive.png" class="img-rounded col"/>
+            </div>
+            <div id="worthWhile" class="col-lg-2">
+                <img src="~/images/Worthwhile.png" class="img-rounded col" />
+           </div>
+
+            </div>
+        <br />
+        <div class="row" style="padding-left :20px;">
+            <label for="userComment">Comment:</label>
+            <textarea class="form-control" rows="5" id="userComment"></textarea>
+           
+        </div>
+        </div>
+        <button type="button" id="toSubmit" class="btn btn-info" >Submit</button>
+                @*<h2>
                 Direct Reports:
                 @for (var i = 0; i < Model.DirectReports.Count; i++)
                 {
@@ -21,14 +43,14 @@
 
         @if (Model.Event != null)
         {
-        <h2>
-            Event: @Model.Event.Subject
-        </h2>
-        <div>
-            <h3>Start: @Model.Event.Start </h3>
-            <h3>End: @Model.Event.End </h3>
-            <h3>Organizer: @Model.Event.Organizer.EmailAddress.Name - @Model.Event.Organizer.EmailAddress.Address </h3>
-        </div>
+            <h2>
+                Event: @Model.Event.Subject
+            </h2>
+            <div>
+                <h3>Start: @Model.Event.Start </h3>
+                <h3>End: @Model.Event.End </h3>
+                <h3>Organizer: @Model.Event.Organizer.EmailAddress.Name - @Model.Event.Organizer.EmailAddress.Address </h3>
+            </div>
         }
 
         <button onclick="createList()" >Submit</button>

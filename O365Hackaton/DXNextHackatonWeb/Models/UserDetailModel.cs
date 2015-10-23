@@ -46,8 +46,9 @@ namespace DXNextHackatonWeb.Models
 
             if (!string.IsNullOrEmpty(eventId))
             {
-                json = await GetJson(String.Format("https://graph.microsoft.com/beta/me/events/{0}", eventId), token);
-                data.Event = JsonConvert.DeserializeObject<EventModel>(json);
+                json = await GetJson(String.Format("https://graph.microsoft.com/beta/me/events?$filter=subject eq '{0}'", eventId), token);
+                //data.Event = JsonConvert.DeserializeObject<EventModel>(json);
+                data.Event = JObject.Parse(json).SelectToken("value")[0].ToObject<EventModel>();
             }
 
             return data;
