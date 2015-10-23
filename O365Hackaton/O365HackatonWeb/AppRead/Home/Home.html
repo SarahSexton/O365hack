@@ -10,36 +10,51 @@
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 
     <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
-    <!-- <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
-    <!-- <script src="../../Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+    <!--  <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!--  <script src="../../Scripts/Office/1/office.js" type="text/javascript"></script>  -->
 
     <link href="../App.css" rel="stylesheet" type="text/css" />
     <script src="../App.js" type="text/javascript"></script>
 
     <link href="Home.css" rel="stylesheet" type="text/css" />
     <script src="Home.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
 </head>
 <body>
+    <div id="content-header">
+        <div class="padding">
+            <h1>TE Readiness Event 2015</h1>
+        </div>
+    </div>
     <div id="content-main">
         <div class="padding">
-            <p><strong>Add home screen content here.</strong></p>
-            <p>For example, this app was activated with following details:</p>
-            <table id="details">
-                <tr>
-                    <th>Subject:</th>
-                    <td id="subject"></td>
-                </tr>
-                <tr>
-                    <th>From:</th>
-                    <td id="from"></td>
-                </tr>
-            </table>
+            <!--<p><strong>Add home screen content here.</strong></p>
+            <p>For example:</p>
+            <button id="set-subject">Set subject</button><button id="get-subject">Get subject</button>
+            <button id="add-to-recipients">Add yourself to recipients list</button>
+
+            <p style="margin-top: 50px;">
+                <a target="_blank" href="https://go.microsoft.com/fwlink/?LinkId=276814">Find more samples online...</a>
+            </p>-->
+            <div>LJKSDH"KJLSHDKJSHDF"</div>
+            <div class="ms-TextField">
+                <label class="ms-Label">Title</label>
+                <input class="ms-TextField-field" />
+            </div>
+
+            <div class="ms-TextField">
+                <label class="ms-Label">E-mail</label>
+                <input class="ms-TextField-field" />
+            </div>
+
+            <div class="ms-TextField">
+                <label class="ms-Label">Was the meeting usefull?</label>
+                <input id="demo-radio-selected" class="ms-ChoiceField-input" type="checkbox"/>
+            </div>
+
         </div>
-    </div>
-    <div id="content-footer">
-        <div class="padding">
-            <a target="_blank" href="https://go.microsoft.com/fwlink/?LinkId=276814">Find more samples online...</a>
         </div>
-    </div>
 </body>
 </html>
