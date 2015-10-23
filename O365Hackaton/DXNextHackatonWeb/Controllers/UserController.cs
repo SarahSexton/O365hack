@@ -36,5 +36,7 @@ namespace DXNextHackatonWeb.Controllers
             AuthenticationResult result = (AuthenticationResult)this.Session[SettingsHelper.UserTokenCacheKey];
             return await context.AcquireTokenByRefreshTokenAsync(result.RefreshToken, clientCredential, SettingsHelper.UnifiedApiResource);
         }
+
+     
     }
 }

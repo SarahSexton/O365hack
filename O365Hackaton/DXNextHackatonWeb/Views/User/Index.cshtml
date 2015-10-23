@@ -14,7 +14,7 @@
         </div>
         <h3>Welcome back @Model.User.displayName</h3>
         
-       <br />
+        <br />
         <div id="imageRow" class="row">
             <h3 style="padding-left:20px;">How was the Turn Out?</h3>
             <div id="unHappy" class="col-lg-2">
@@ -22,8 +22,8 @@
             </div>
             <div id="worthWhile" class="col-lg-2">
                 <img src="~/images/Worthwhile.png" class="img-rounded col" style="margin-left:-50px; " />
+           </div>
             </div>
-        </div>
         <br />
         <div class="row" style="padding-left :20px;">
             <label for="userComment">Comment:</label>
@@ -33,35 +33,38 @@
         </div>
 
        
+           
+        </div>
+                @*<h2>
+                Direct Reports:
+                @for (var i = 0; i < Model.DirectReports.Count; i++)
+                {
+                    <span><a href="/User/Detail?id=@Model.DirectReports[i].objectId">@Model.DirectReports[i].displayName</a></span>if (i < Model.DirectReports.Count - 1)
+                    {<span>, </span>}
+                }
+            </h2>*@
 
-    </div>
-    @*<h2>
-            Direct Reports:
-            @for (var i = 0; i < Model.DirectReports.Count; i++)
-            {
-                <span><a href="/User/Detail?id=@Model.DirectReports[i].objectId">@Model.DirectReports[i].displayName</a></span>if (i < Model.DirectReports.Count - 1)
-                {<span>, </span>}
-            }
-        </h2>*@
-
-    @if (Model.Event != null)
-    {
-        <h2>
-            Event: @Model.Event.Subject
-        </h2>
+        @if (Model.Event != null)
+        {
+            <h2>
+                Event: @Model.Event.Subject
+            </h2>
             <div>
                 <h3>Start: @Model.Event.Start </h3>
                 <h3>End: @Model.Event.End </h3>
                 <h3>Organizer: @Model.Event.Organizer.EmailAddress.Name - @Model.Event.Organizer.EmailAddress.Address </h3>
             </div>
-    }
-</div>
-@*<div class="col-xs-6">
-        <h2>@Model.User.displayName's files</h2>
-        <ul>
-            @foreach (var file in Model.Files)
-            {
-                <li>@file.name</li>
-            }
-        </ul>
-    </div>*@
+        }
+
+        <button onclick="createList()" >Submit</button>
+
+    </div>
+    @*<div class="col-xs-6">
+            <h2>@Model.User.displayName's files</h2>
+            <ul>
+                @foreach (var file in Model.Files)
+                {
+                    <li>@file.name</li>
+                }
+            </ul>
+        </div>*@
