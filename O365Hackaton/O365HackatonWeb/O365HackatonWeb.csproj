@@ -134,6 +134,7 @@
     <Content Include="AppCompose\Home\Feedback.html" />
     <Content Include="AppCompose\Home\Feedback.js" />
     <Content Include="AppCompose\Home\Feedback.css" />
+    <Content Include="Images\TurnOut -64.png" />
     <Content Include="packages.config" />
     <Content Include="Service References\Office365\ConnectedService.json" />
     <None Include="Web.Debug.config">
