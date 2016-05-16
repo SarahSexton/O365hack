@@ -12,3 +12,4 @@ Outlook and Skype for Business users endure frustrating conference calls and unp
 Turn Out is designed to increase user productivity, explicitly for Office. This Add-in also helps users keep track of customer management meetings quickly and efficiently. Turn Out accesses data in the user's currently selected Outlook calendar item and connects to web services. We used web standards-based technologies, such as HTML5, JavaScript, CSS3, XML, and REST APIs. 
 
 ![Team Turn Out Photo](/images/Victory3.png)
+![Screenshot](/images/TurnOut.png)
